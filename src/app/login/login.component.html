@@ -1,0 +1,36 @@
+<link rel="stylesheet" type="text/css" href="/node_modules/primeicons/primeicons.css" />
+<link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/themes/nova-light/theme.css" />
+<link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/primeng.min.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<div class="header" Arial Black>
+  <p style="font-size: 30px; color: whitesmoke;" >WELCOME SELAMAT DATANG</p>
+  
+</div>
+<br>
+<hr>
+<br>
+<p style="text-align: center;font-size: 30px; color: rgb(11, 10, 102);font-family: 'Courier New', Courier, monospace; "><b>LOGIN</b></p>
+<div class="container p-3 my-3 border" >
+  <br>
+<span class="ui-float-label" id="back"> 
+ 
+  <input [(ngModel)]="uRequest.username" id="float-input" type="text" size="30" pInputText > 
+  <label for="float-input">Username </label> &nbsp;   
+</span>
+
+<br>
+<span class="ui-float-label">
+  <input [(ngModel)]="uRequest.password" id="float-input" type="text" size="30" pInputText > 
+  <label for="float-input">Password </label>&nbsp;
+</span>
+<br>
+<ul>
+  <button _ngcontent-vks-c3="" (click)="lookUser()"class="ui-button-rounded ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" label="Primary" pbutton="" type="reset" >
+    <span class="ui-button-text ui-clickable">Enter</span></button>
+</ul> 
+<br>
+<hr>
+<div class="footer">
+  <p style="text-align: center;">@Copyright 2020 - I KADEK ARYA YOGIMIYAANTARA</p>
+</div>

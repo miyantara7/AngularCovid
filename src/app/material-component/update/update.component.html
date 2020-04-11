@@ -1,0 +1,65 @@
+<div fxFlex.gt-lg="66" fxFlex.gt-md="66"  fxFlex.gt-xs="100" fxFlex="100">
+    <mat-card>
+        <mat-card-content>
+            <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                </head>
+               
+                    <h2>CASES COVID-19</h2>
+                    <div style="overflow-x:auto;">
+                    <table>
+                            <tr>
+                                <th>Kota</th>
+                                <th>Negatif</th>
+                                <th>Positif</th>
+                                <th>Meninggal</th> 
+                                <th>Sembuh</th> 
+                                <th>Option</th>  
+                            </tr>         
+                            <tr *ngFor="let data of dataCovids">
+                                <td>{{data.namaKota}}</td>
+                                <td>{{data.kasusNegatif}}</td>
+                                <td>{{data.kasusPositif}}</td>
+                                <td>{{data.kasusMati}}</td>
+                                <td>{{data.kasusSembuh}}</td>
+                                <button pButton type="button" label="Update" class="ui-button-raised" (click)="pilData(data)"></button>             
+                            </tr>        
+                    </table>    
+                </div>
+                
+            </mat-card-content>    
+             </mat-card>
+             </div>
+             <div fxLayout="row wrap">
+                <div fxFlex.gt-lg="66" fxFlex.gt-md="66" fxFlex.gt-xs="100" fxFlex="100">
+                    <mat-card>
+                        <mat-card-content>
+                            <span class="ui-float-label">
+                                <input id="float-input" type="text" size="30" [(ngModel)]="pilCovid2.namaKota" pInputText > 
+                                <label for="float-input">Nama Kota</label>
+                                </span>
+                                <br>
+                                <span class="ui-float-label">
+                                        <input id="float-input" type="text" size="30" [(ngModel)]="pilCovid2.kasusPositif" pInputText> 
+                                        <label for="float-input">Kasus Terkonfirmasi</label>
+                                    </span>
+                                    <br>
+                                    <span class="ui-float-label">
+                                        <input id="float-input" type="text" size="30" [(ngModel)]="pilCovid2.kasusNegatif" pInputText> 
+                                        <label for="float-input">Kasus Negatif</label>
+                                    </span>
+                                    <br>
+                                    <span class="ui-float-label">
+                                        <input id="float-input" type="text" size="30" [(ngModel)]="pilCovid2.kasusMati" pInputText> 
+                                        <label for="float-input">Kasus Meninggal</label>
+                                    </span>
+                                    <br>
+                                    <span class="ui-float-label">
+                                        <input id="float-input" type="text" size="30" [(ngModel)]="pilCovid2.kasusSembuh" pInputText> 
+                                        <label for="float-input">Kasus Sembuh</label>
+                                    </span>
+                                    <br>
+                                    <button pButton type="button" label="Insert" class="ui-button-raised" (click)="updateCovid()" ></button>
+                        </mat-card-content>
+                    </mat-card>
+                </div>

@@ -1,0 +1,76 @@
+<div fxLayout="row" fxLayoutWrap="wrap">
+    <div fxFlex.gt-sm="100%" fxFlex="100">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+  
+  <div class="container">
+    <br>
+    <h2>CASES COVID-19</h2>
+    <!-- <p>The .table-striped class adds zebra-stripes to a table:</p>             -->
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Kota</th>
+                <th>Negatif</th>
+                <th>Positif</th>
+                <th>Meninggal</th> 
+                <th>Sembuh</th> 
+                <th>Option</th>  
+            </tr>         
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of dataCovids">
+                <td>{{data.namaKota}}</td>
+                <td>{{data.kasusNegatif}}</td>
+                <td>{{data.kasusPositif}}</td>
+                <td>{{data.kasusMati}}</td>
+                <td>{{data.kasusSembuh}}</td>
+                <button pButton type="button" label="Delete" class="ui-button-raised ui-button-danger" (click)="deleteCovid(data)"></button>                         
+            </tr>        
+        </tbody>
+    </table>
+  </div> 
+  </body>
+</div>
+<!-- <div fxLayout="row" fxLayoutWrap="wrap">
+    <div fxFlex.gt-sm="100%" fxFlex="100">
+            <mat-card>
+                <mat-card-content>
+                    <div class="row col-md-6 col-md-offset-2 custyle">
+                        <table class="table table-striped custab">
+                        <thead>
+                            <tr>
+                                <th>Kota</th>
+                                <th>Negatif</th>
+                                <th>Positif</th>
+                                <th>Meninggal</th> 
+                                <th>Sembuh</th>   
+                            </tr>
+                            
+                        </thead>
+                        
+                        <tbody>
+                            <tr *ngFor="let data of dataCovids">
+                                <td>{{data.namaKota}}</td>
+                                <td>{{data.kasusNegatif}}</td>
+                                <td>{{data.kasusPositif}}</td>
+                                <td>{{data.kasusMati}}</td>
+                                <td>{{data.kasusSembuh}}</td>
+                                <button pButton type="button" label="Delete" class="ui-button-raised ui-button-danger" (click)="deleteCovid(data)"></button>
+                            </tr>        
+                        </tbody>
+                        </table>
+                        
+                        </div>
+                        
+                </mat-card-content>    
+         </mat-card>
+</div> -->

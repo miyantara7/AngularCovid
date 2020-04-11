@@ -1,0 +1,32 @@
+<div fxLayout="row" fxLayoutWrap="wrap">
+    <div fxFlex.gt-sm="100%" fxFlex="100">
+            <mat-card>
+                <mat-card-content>
+                    <span class="ui-float-label">
+                        <input id="float-input" type="text" size="30" [(ngModel)]="covids.namaKota" pInputText > 
+                        <label for="float-input">Nama Kota</label>
+                    </span>
+                    <br>
+                    <span class="ui-float-label">
+                        <input id="float-input" type="text" size="30" [(ngModel)]="covids.kasusPositif" pInputText> 
+                        <label for="float-input">Kasus Terkonfirmasi</label>
+                    </span>
+                    <br>
+                    <span class="ui-float-label">
+                        <input id="float-input" type="text" size="30" [(ngModel)]="covids.kasusNegatif"pInputText> 
+                        <label for="float-input">Kasus Negatif</label>
+                    </span>
+                    <br>
+                    <span class="ui-float-label">
+                        <input id="float-input" type="text" size="30" [(ngModel)]="covids.kasusMati" pInputText> 
+                        <label for="float-input">Kasus Meninggal</label>
+                    </span>
+                    <br>
+                    <span class="ui-float-label">
+                        <input id="float-input" type="text" size="30" [(ngModel)]="covids.kasusSembuh" pInputText> 
+                        <label for="float-input">Kasus Sembuh</label>
+                    </span>
+                    <br>
+                    <button pButton type="button" label="Insert" class="ui-button-raised" (click)="insertCovid()"></button>
+                </mat-card-content>    
+         </mat-card>
